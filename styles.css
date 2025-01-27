@@ -1,4 +1,4 @@
-/* È«¾ÖÑùÊ½ */
+/* å…¨å±€æ ·å¼ */
 body {
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	margin: 0;
@@ -7,7 +7,7 @@ body {
 	line-height: 1.6;
 }
 
-/* µ¼º½À¸ÑùÊ½ */
+/* å¯¼èˆªæ æ ·å¼ */
 nav {
 	background-color: #2c3e50;
 	position: sticky;
@@ -34,9 +34,9 @@ nav {
 }
 
 .logo-icon {
-	height: 30px; /* ¿É¸ù¾İÊµ¼ÊÇé¿öµ÷ÕûÍ¼±ê¸ß¶È */
+	height: 30px; /* å¯æ ¹æ®å®é™…æƒ…å†µè°ƒæ•´å›¾æ ‡é«˜åº¦ */
 	width: auto;
-	margin-right: 10px; /* Í¼±êºÍÎÄ×ÖÖ®¼äµÄ¼ä¾à */
+	margin-right: 10px; /* å›¾æ ‡å’Œæ–‡å­—ä¹‹é—´çš„é—´è· */
 }
 
 nav ul {
@@ -63,7 +63,7 @@ nav ul {
 				background-color: #34495e;
 			}
 
-/* Ó¢ĞÛÇøÓòÑùÊ½ */
+/* è‹±é›„åŒºåŸŸæ ·å¼ */
 .hero {
 	background: linear-gradient(to bottom, #3498db, #2980b9);
 	color: white;
@@ -105,7 +105,7 @@ nav ul {
 		color: #2c3e50;
 	}
 
-/* ¹ØÓÚÈí¼şÇøÓòÑùÊ½ */
+/* å…³äºè½¯ä»¶åŒºåŸŸæ ·å¼ */
 .about {
 	padding: 100px 0;
 	text-align: center;
@@ -129,7 +129,7 @@ nav ul {
 	margin: 0 auto;
 }
 
-/* ¹¦ÄÜÇøÓòÑùÊ½ */
+/* åŠŸèƒ½åŒºåŸŸæ ·å¼ */
 .features {
 	padding: 100px 0;
 	background-color: #f9f9f9;
@@ -156,11 +156,14 @@ nav ul {
 	background-color: white;
 	border-radius: 10px;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-	transition: transform 0.3s ease;
+	opacity: 0;
+	transform: translateY(20px);
+	transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
-	.feature:hover {
-		transform: translateY(-10px);
+	.feature.visible {
+		opacity: 1;
+		transform: translateY(0);
 	}
 
 	.feature i {
@@ -179,7 +182,7 @@ nav ul {
 		font-size: 16px;
 	}
 
-/* ÏÂÔØÇøÓòÑùÊ½ */
+/* ä¸‹è½½åŒºåŸŸæ ·å¼ */
 .download {
 	padding: 100px 0;
 	text-align: center;
@@ -219,7 +222,7 @@ nav ul {
 		color: #2980b9;
 	}
 
-/* Ò³½ÅÑùÊ½ */
+/* é¡µè„šæ ·å¼ */
 footer {
 	background-color: #2c3e50;
 	color: white;
@@ -227,7 +230,7 @@ footer {
 	padding: 50px 0;
 }
 
-/* ¶¯»­Ğ§¹û */
+/* åŠ¨ç”»æ•ˆæœ */
 @keyframes fadeInUp {
 	from {
 		opacity: 0;
@@ -240,7 +243,7 @@ footer {
 	}
 }
 
-/* Ã½Ìå²éÑ¯ - Ğ¡ÆÁÄ»Éè±¸£¨ÈçÊÖ»ú£© */
+/* åª’ä½“æŸ¥è¯¢ - å°å±å¹•è®¾å¤‡ï¼ˆå¦‚æ‰‹æœºï¼‰ */
 @media screen and (max-width: 767px) {
 	.nav-container {
 		flex-direction: column;
@@ -285,12 +288,9 @@ footer {
 	}
 }
 
-/* Ã½Ìå²éÑ¯ - ÖĞµÈÆÁÄ»Éè±¸£¨ÈçÆ½°å£© */
+/* åª’ä½“æŸ¥è¯¢ - ä¸­ç­‰å±å¹•è®¾å¤‡ï¼ˆå¦‚å¹³æ¿ï¼‰ */
 @media screen and (min-width: 768px) and (max-width: 991px) {
 	.feature {
 		width: 40%;
 	}
-}
-html {
-	scroll-behavior: smooth;
 }
