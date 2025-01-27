@@ -15,7 +15,7 @@
         <div class="nav-container">
             <!-- 添加商标图标 -->
             <a href="#" class="logo">
-                <img src="ZZH.ico" alt="ZZH系统工具商标" class="logo-icon">
+                <img src="ZZH.ico" alt="" class="logo-icon">
                 ZZH系统工具
             </a>
             <ul>
@@ -163,7 +163,6 @@
             </div>
         </section>
     </main>
-
     <!-- 页脚 -->
     <footer>
         <div class="container">
@@ -172,30 +171,30 @@
     </footer>
 
     <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const features = document.querySelectorAll('.fade-in');
+        document.addEventListener("DOMContentLoaded", function () {
+            const features = document.querySelectorAll('.fade-in');
 
-      function isElementInViewport(el) {
-        const rect = el.getBoundingClientRect();
-        return (
-          rect.top >= 0 &&
-          rect.left >= 0 &&
-          rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-          rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-        );
-      }
+            function isElementInViewport(el) {
+                const rect = el.getBoundingClientRect();
+                return (
+                    rect.top >= 0 &&
+                    rect.left >= 0 &&
+                    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+                );
+            }
 
-      function fadeInFeatures() {
-        features.forEach(function (feature) {
-          if (isElementInViewport(feature)) {
-            feature.classList.add('visible');
-          }
+            function fadeInFeatures() {
+                features.forEach(function (feature) {
+                    if (isElementInViewport(feature)) {
+                        feature.classList.add('visible');
+                    }
+                });
+            }
+
+            window.addEventListener('scroll', fadeInFeatures);
+            fadeInFeatures();
         });
-      }
-
-      window.addEventListener('scroll', fadeInFeatures);
-      fadeInFeatures();
-    });
     </script>
 </body>
 
