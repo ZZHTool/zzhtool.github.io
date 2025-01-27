@@ -24,7 +24,7 @@
                 opacity: 0,
                 scale: 0.8,
                 duration: 1,
-                ease: 'ease - in - out',
+                ease: 'ease-in-out',
                 onComplete: function () {
                     heroTitle.style.transform = 'none';
                 }
@@ -107,9 +107,9 @@
                 </div>
                 <div class="feature-row">
                     <div class="feature fade-in">
-                        <i class="fas fa-sync"></i>
-                        <h3>支持重启文件资源管理器</h3>
-                        <p>可快速重启文件资源管理器，解决文件资源管理器无响应等问题。</p>
+                        <i class="fas fa-tools"></i>
+                        <h3>系统工具</h3>
+                        <p>通过该功能，能快速定位各类系统管理工具。无论是磁盘管理、设备管理器，还是用户账户管理等常用工具，都能在一个统一的界面中便捷查找与访问，无需在复杂的系统目录中层层寻找，极大地提高了用户操作效率，让系统管理变得更加轻松便捷。</p>
                     </div>
                     <div class="feature fade-in">
                         <i class="fas fa-trash-alt"></i>
@@ -123,6 +123,11 @@
                     </div>
                 </div>
                 <div class="feature-row">
+                    <div class="feature fade-in">
+                        <i class="fas fa-sync"></i>
+                        <h3>支持重启文件资源管理器</h3>
+                        <p>可快速重启文件资源管理器，解决文件资源管理器无响应等问题。</p>
+                    </div>
                     <div class="feature fade-in">
                         <i class="fas fa-list-ol"></i>
                         <h3>选号器</h3>
@@ -195,7 +200,6 @@
             <p>&copy; 2025 ZZH 系统工具. 保留所有权利。</p>
         </div>
     </footer>
-
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const features = document.querySelectorAll('.fade-in');
