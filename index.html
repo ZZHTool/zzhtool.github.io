@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv ='content-language' content ='zh-cn'>
+    <meta http-equiv='content-language' content='zh-cn'>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ZZH系统工具-强大的系统助手</title>
     <link rel="icon" href="ZZH.ico" type="image/x-icon">
@@ -19,6 +19,28 @@
         })(window, document, "clarity", "script", "q081dpw7yy");
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <style>
+        /* 动态背景样式 */
+        body {
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+    </style>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const heroTitle = document.querySelector('.hero h1');
