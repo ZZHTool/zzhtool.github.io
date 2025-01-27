@@ -65,7 +65,7 @@ nav ul {
 
 /* 英雄区域样式 */
 .hero {
-	/*background: linear-gradient(to bottom, #3498db, #2980b9);*/
+	background: linear-gradient(to bottom, #3498db, #2980b9);
 	color: white;
 	text-align: center;
 	padding: 80px 0;
@@ -256,19 +256,19 @@ nav ul {
 	}
 
 	.download-table th {
-		/*background-color: #f2f2f2;*/
+		background-color: #f2f2f2;
 		font-weight: bold;
 	}
 
 .download-link {
-	color: #3498db;
+	color: #b200ff;
 	text-decoration: none;
 	font-weight: bold;
 	transition: color 0.3s ease;
 }
 
 	.download-link:hover {
-		color: #2980b9;
+		color: #00ff90;
 	}
 
 /* 页脚样式 */
