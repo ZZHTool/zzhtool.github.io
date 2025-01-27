@@ -242,7 +242,6 @@ footer {
 		transform: translateY(0);
 	}
 }
-
 /* 媒体查询 - 小屏幕设备（如手机） */
 @media screen and (max-width: 767px) {
 	.nav-container {
