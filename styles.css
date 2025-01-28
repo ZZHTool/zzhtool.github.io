@@ -218,18 +218,6 @@ nav ul {
 		transition: transform 0.3s ease; /* 添加过渡效果，使放大更平滑 */
 	}
 
-/* 软件特点区域样式 */
-.software-features {
-	padding: 100px 0;
-	/*background-color: #f9f9f9;*/
-	text-align: center;
-}
-
-	.software-features h2 {
-		font-size: 36px;
-		margin-bottom: 50px;
-		color: #2c3e50;
-	}
 
 /* 下载区域样式 */
 .download {
