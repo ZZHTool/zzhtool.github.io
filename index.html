@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv='content-language' content='zh-cn'>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZZH系统工具-强大的系统助手</title>
-    <meta name="description" content="ZZH系统工具-强大的系统管理助手，这是一款专为电脑用户精心打造的多功能系统管理软件。它就像一个功能强大的魔法工具箱，集成了众多令人惊叹的实用功能，只为帮助您更好地管理和优化电脑系统，让您的电脑性能如火箭般飙升，使用效率也能得到质的飞跃！">
-    <meta name="keywords" content="ZZH,系统,工具,Windows,优化">
+    <title>ZZH系统工具-强大的系统管理助手</title>
+    <meta name="description" content="ZZH系统工具-强大的系统管理助手，这是一款专为Windows用户精心打造的多功能系统管理软件。它就像一个功能强大的魔法工具箱，集成了众多令人惊叹的实用功能，只为帮助您更好地管理和优化电脑系统，让您的电脑性能如火箭般飙升，使用效率也能得到质的飞跃！">
+    <meta name="keywords" content="ZZH,系统,工具,Windows,优化,管理">
     <meta name="author" content="ZZH">
     <link rel="icon" href="ZZH.ico" type="image/x-icon">
     <link rel="stylesheet" href="styles.css">
@@ -34,10 +34,10 @@
             0% {
                 background-position: 0% 0%;
             }
+
             100% {
                 background-position: 100% 100%;
             }
-
         }
     </style>
     <script>
@@ -81,7 +81,7 @@
         <section id="hero" class="hero">
             <div class="hero-content">
                 <h1>欢迎使用ZZH系统工具</h1>
-                <p>ZZH 系统工具，宛如电脑系统的全能管家，是一款专为电脑用户精心打造的多功能系统管理软件。它就像一个功能强大的魔法工具箱，集成了众多令人惊叹的实用功能，只为帮助您更好地管理和优化电脑系统，让您的电脑性能如火箭般飙升，使用效率也能得到质的飞跃！</p>
+                <p>ZZH 系统工具，宛如电脑系统的全能管家，是一款专为Windows用户精心打造的多功能系统管理软件。它就像一个功能强大的魔法工具箱，集成了众多令人惊叹的实用功能，只为帮助您更好地管理和优化电脑系统，让您的电脑性能如火箭般飙升，使用效率也能得到质的飞跃！</p>
                 <p>无论您是初涉电脑世界的小白用户，还是在计算机领域深耕多年的专业人士，ZZH 系统工具都能如同贴心的伙伴一般，完美满足您的各种需求。</p>
                 <a href="ZZH系统工具v3.0.exe" class="btn" onclick="showAlert1()">最新版本</a>
                 <script>
@@ -106,7 +106,7 @@
         <section id="about" class="about">
             <div class="container">
                 <h2>关于 ZZH系统工具</h2>
-                <p>ZZH 系统工具，宛如电脑世界的一位全能魔法师，专为广大电脑用户量身定制。它汇聚了一系列令人惊艳的实用功能，就像一套精心打造的工具箱，每一个工具都独具匠心。</p>
+                <p>ZZH 系统工具，宛如电脑世界的一位全能魔法师，专为广大Windows用户量身定制。它汇聚了一系列令人惊艳的实用功能，就像一套精心打造的工具箱，每一个工具都独具匠心。</p>
                 <p>这款软件的使命，就是成为您电脑系统的贴心守护者，帮助您更加得心应手地管理和优化电脑系统。它能巧妙地优化各项设置，使您在使用电脑的过程中，如同行云流水般顺畅，大大提高使用效率。</p>
                 <p>不管您是刚刚踏入电脑世界的新手小白，对电脑的操作还略显生疏；还是在计算机领域纵横驰骋多年的专业大咖，对电脑有着极高的要求，ZZH 系统工具都能像一位善解人意的伙伴，精准地满足您的各种需求，为您带来无与伦比的使用体验。</p>
             </div>
@@ -242,50 +242,57 @@
                             <td>版本号</td>
                             <td>更新内容</td>
                             <td>下载链接</td>
+                            <td>备用链接</td>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>3.1</td>
                             <td>新增文件资源管理器个性化设置，帮助用户更好地优化文件资源管理器，提升用户体验</td>
-                            <td><a onclick="showAlert2()">敬请期待</a></td>
+                            <td><a class="download-link" onclick="showAlert2()">敬请期待</a></td>
+                            <td><a class="download-link" onclick="showAlert2()">敬请期待</a></td>
                         </tr>
                         <tr>
                             <td>3.0</td>
                             <td>对所有功能进行了全面且深度的升级，显著提升了整体性能与工作效率，为你带来更加流畅、高效的使用体验。</td>
                             <td><a href="ZZH系统工具v3.0.exe" class="download-link" onclick="showAlert1()">下载</a></td>
+                            <td><a href="https://gitee.com/ZZH-Tools/ZZH-tools/raw/master/ZZH%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7v3.0.exe" class="download-link" onclick="showAlert1()">下载</a></td>
                         </tr>
                         <tr>
                             <td>2.9</td>
-                            <td>
-                                修复了一系列已知的漏洞，进一步提高了软件的稳定性。新增选号器动画，为选号过程带来动态视觉效果，提升用户体验。同时，优化了管理进程功能的响应速度，并增加了进程详细信息的展示，让您更全面地了解系统进程状态。
-                            </td>
+                            <td>修复了一系列已知的漏洞，进一步提高了软件的稳定性。新增选号器动画，为选号过程带来动态视觉效果，提升用户体验。同时，优化了管理进程功能的响应速度，并增加了进程详细信息的展示，让您更全面地了解系统进程状态。</td>
                             <td><a href="ZZH系统工具v2.9.exe" class="download-link" onclick="showAlert()">下载</a></td>
+                            <td><a href="https://gitee.com/ZZH-Tools/ZZH-tools/raw/master/ZZH%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7v2.9.exe" class="download-link" onclick="showAlert()">下载</a></td>
                         </tr>
                         <tr>
                             <td>2.8</td>
                             <td>修复了部分已知漏洞，全面提升了软件的稳定性。并且增强了软件的兼容性，支持更多操作系统版本，让更多用户能够轻松使用。</td>
                             <td><a href="ZZH系统工具v2.8.exe" class="download-link" onclick="showAlert()">下载</a></td>
+                            <td><a href="https://gitee.com/ZZH-Tools/ZZH-tools/raw/master/ZZH%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7v2.8.exe" class="download-link" onclick="showAlert()">下载</a></td>
                         </tr>
                         <tr>
                             <td>2.7</td>
                             <td>新增了文件浏览和软件卸载功能，方便您更便捷地管理电脑中的文件和软件。</td>
                             <td><a href="ZZH系统工具v2.7.exe" class="download-link" onclick="showAlert()">下载</a></td>
+                            <td><a href="https://gitee.com/ZZH-Tools/ZZH-tools/raw/master/ZZH%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7v2.7.exe" class="download-link" onclick="showAlert()">下载</a></td>
                         </tr>
                         <tr>
                             <td>2.6</td>
                             <td>新增了内存清理功能，能够有效释放系统内存，让你的电脑运行更加流畅。</td>
                             <td><a href="ZZH系统工具v2.6.exe" class="download-link" onclick="showAlert()">下载</a></td>
+                            <td><a href="https://gitee.com/ZZH-Tools/ZZH-tools/raw/master/ZZH%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7v2.6.exe" class="download-link" onclick="showAlert()">下载</a></td>
                         </tr>
                         <tr>
                             <td>2.5</td>
                             <td>对软件界面布局进行了精心优化，全方位提升了用户体验，让你在使用过程中更加舒适、便捷。</td>
                             <td><a href="ZZH系统工具v2.5.exe" class="download-link" onclick="showAlert()">下载</a></td>
+                            <td><a href="https://gitee.com/ZZH-Tools/ZZH-tools/raw/master/ZZH%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7v2.5.exe" class="download-link" onclick="showAlert()">下载</a></td>
                         </tr>
                         <tr>
                             <td>2.4</td>
                             <td>增加了自制选号器，可用于彩票选号、抽奖选号等多种场景。该选号器采用先进的随机算法生成号码，同时支持用户自定义号码范围，满足你的个性化选号需求。在抽奖场景下，能够快速生成不重复的抽奖号码，确保抽奖过程的公平公正。</td>
                             <td><a href="ZZH系统工具v2.4.exe" class="download-link" onclick="showAlert()">下载</a></td>
+                            <td><a href="https://gitee.com/ZZH-Tools/ZZH-tools/raw/master/ZZH%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7v2.4.exe" class="download-link" onclick="showAlert()">下载</a></td>
                         </tr>
                     </tbody>
                 </table>
