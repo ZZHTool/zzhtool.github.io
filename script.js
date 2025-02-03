@@ -79,7 +79,6 @@ window.addEventListener('scroll', function () {
 });
 function fuckyou() {
     window.close();
-    window.location = "about:blank";
 }
 if (window.addEventListener) {
     window.addEventListener("DOMCharacterDataModified", function () { window.location.reload(); }, true);
