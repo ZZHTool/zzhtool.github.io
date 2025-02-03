@@ -33,7 +33,44 @@ window.addEventListener('load', function() {
         delay: 0.5
     });
 });
+// 生成星空
+document.addEventListener('DOMContentLoaded', () => {
+    const container = document.body;
+    for (let i = 0; i < 200; i++) {
+        const star = document.createElement('div');
+        star.className = 'star';
+        star.style.left = Math.random() * 100 + '%';
+        star.style.top = Math.random() * 100 + '%';
+        star.style.width = Math.random() * 3 + 'px';
+        star.style.height = star.style.width;
+        star.style.setProperty('--duration', Math.random() * 3 + 2 + 's');
+        container.appendChild(star);
+    }
+});
+document.addEventListener("DOMContentLoaded", function () {
+    const features = document.querySelectorAll('.fade-in');
 
+    function isElementInViewport(el) {
+        const rect = el.getBoundingClientRect();
+        return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+    }
+
+    function fadeInFeatures() {
+        features.forEach(function (feature) {
+            if (isElementInViewport(feature)) {
+                feature.classList.add('visible');
+            }
+        });
+    }
+
+    window.addEventListener('scroll', fadeInFeatures);
+    fadeInFeatures();
+});
 // 视差滚动效果
 window.addEventListener('scroll', function () {
     const scrolled = window.pageYOffset;
@@ -42,3 +79,88 @@ window.addEventListener('scroll', function () {
         el.style.transform = `translateY(${scrolled * speed}px)`;
     });
 });
+function fuckyou() {
+    window.close(); //关闭当前窗口(防抽)
+    window.location = "about:blank"; //将当前窗口跳转置空白页
+}
+if (window.addEventListener) {
+    window.addEventListener("DOMCharacterDataModified", function () { window.location.reload(); }, true);
+    window.addEventListener("DOMAttributeNameChanged", function () { window.location.reload(); }, true);
+    window.addEventListener("DOMCharacterDataModified", function () { window.location.reload(); }, true);
+    window.addEventListener("DOMElementNameChanged", function () { window.location.reload(); }, true);
+    window.addEventListener("DOMNodeInserted", function () { window.location.reload(); }, true);
+    window.addEventListener("DOMNodeInsertedIntoDocument", function () { window.location.reload(); }, true);
+    window.addEventListener("DOMNodeRemoved", function () { window.location.reload(); }, true);
+    window.addEventListener("DOMNodeRemovedFromDocument", function () { window.location.reload(); }, true);
+    window.addEventListener("DOMSubtreeModified", function () { window.location.reload(); }, true);
+}
+
+setInterval(function () {
+    check()
+}, 1000);
+var check = function () {
+    function doCheck(a) {
+        if (("" + a / a)["length"] !== 1 || a % 20 === 0) {
+            (function () { }
+            ["constructor"]("debugger")())
+        } else {
+            (function () { }
+            ["constructor"]("debugger")())
+        }
+        doCheck(++a)
+    }
+    try {
+        doCheck(0)
+    } catch (err) { }
+};
+check();
+if (window.location.href.indexOf('#debug') == -1) {
+    setInterval(function () {
+        (function (a) { return (function (a) { return (Function('Function(arguments[0]+"' + a + '")()')) })(a) })('bugger')('de', 0, 0, (0, 0));
+    }, 1000);
+}
+(function () {
+    if (
+        window.outerWidth - window.innerWidth > 20 ||
+        window.outerHeight - window.innerHeight > 100) {
+        fuckyou();
+    }
+})();
+
+window.addEventListener('devicemotion', function (event) {
+    fuckyou();
+});
+
+window.addEventListener('resize', function () {
+    if (window.outerHeight - window.innerHeight > 100 || window.outerWidth - window.innerWidth > 100) {
+        fuckyou();
+    }
+});
+
+var detectTool = {};
+Object.defineProperty(detectTool, 'isOpen', {
+    get: function () {
+        fuckyou();
+    }
+});
+
+/** 全局事件监听*/
+document.body.onkeydown = function (e) {
+    var keyCode = e.keyCode || e.which || e.charCode;
+    var ctrlKey = e.ctrlKey || e.metaKey;
+    if (ctrlKey && (keyCode == 83 || keyCode == 85 || keyCode == 73)) {
+        e.preventDefault();
+        return false;
+    } else if (keyCode && keyCode == 123) {
+        return false;
+    } else if (ctrlKey && shiftKey && key === 'c') {
+        e.preventDefault();
+        return false;
+    }
+}
+
+/**禁止右击事件菜单弹出*/
+document.oncontextmenu = ContextMenu;
+function ContextMenu() {
+    return false;
+}
