@@ -243,17 +243,19 @@ nav ul {
 		padding: 5px 0;
 	}
 
-	footer .email{
-		color: #007BFF; /* 设置邮箱链接的颜色 */
-		text-decoration: none; /* 去掉下划线 */
-		font-weight: bold; /* 加粗字体 */
-		transition: color 0.3s ease; /* 添加颜色过渡效果 */
+.email{
+	color: #007BFF; /* 设置邮箱链接的颜色 */
+	text-decoration: none; /* 去掉下划线 */
+	font-weight: bold; /* 加粗字体 */
+	transition: color 0.3s ease; /* 添加颜色过渡效果 */
+}
+	.email:hover{
+		color: #b200ff; /* 鼠标悬停时改变颜色 */
+		text-decoration: underline; /* 鼠标悬停时显示下划线 */
 	}
-
-		footer .email:hover {
-			color: #0056b3; /* 鼠标悬停时改变颜色 */
-			text-decoration: underline; /* 鼠标悬停时显示下划线 */
-		}
+	.email:active {
+		color: white; /* 鼠标点击时改变颜色 */
+	}
 
 /* 动画效果 */
 @keyframes fadeInUp {
