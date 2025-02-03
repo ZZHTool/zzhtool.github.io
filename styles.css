@@ -103,6 +103,8 @@ nav ul {
 	.btn:hover {
 		background-color: #ecf0f1;
 		color: #2c3e50;
+		transform: translateY(-3px);
+		box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 	}
 
 /* 关于软件区域样式 */
@@ -184,8 +186,9 @@ nav ul {
 	}
 
 	.feature:hover {
-		transform: scale(0.95);
-		transition: transform 0.3s ease; /* 添加过渡效果，使放大更平滑 */
+		transform: scale(1.05);
+		transition: transform 0.3s ease, box-shadow 0.2s ease;
+		box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 	}
 
 
@@ -491,5 +494,22 @@ nav ul {
 
 	50%, 100% {
 		bottom: 100%;
+	}
+}
+
+.star {
+	position: fixed;
+	background: white;
+	border-radius: 50%;
+	animation: twinkle var(--duration) ease-in-out infinite;
+}
+
+@keyframes twinkle {
+	0%, 100% {
+		opacity: 0.3;
+	}
+
+	50% {
+		opacity: 1;
 	}
 }
