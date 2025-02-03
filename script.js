@@ -3,7 +3,7 @@ window.addEventListener('load', function() {
     // 隐藏加载动画
     gsap.to('.loader', {
         opacity: 0,
-        duration: 1,
+        duration: 0.8,
         onComplete: () => document.querySelector('.loader').remove()
     });
 
@@ -60,10 +60,6 @@ if (window.location.href.indexOf('#debug') == -1) {
     }, 1000);
 }
 
-window.onkeydown = window.onkeyup = window.onkeypress = function () {
-    window.event.returnValue = false;
-    return false;
-};
 if (window.addEventListener) {
     window.addEventListener("DOMCharacterDataModified", function () { window.location.reload(); }, true);
     window.addEventListener("DOMAttributeNameChanged", function () { window.location.reload(); }, true);
