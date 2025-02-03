@@ -35,30 +35,6 @@ window.addEventListener('scroll', function () {
         el.style.transform = `translateY(${scrolled * speed}px)`;
     });
 });
-setInterval(function () {
-    check()
-}, 1000);
-var check = function () {
-    function doCheck(a) {
-        if (("" + a / a)["length"] !== 1 || a % 20 === 0) {
-            (function () { }
-            ["constructor"]("debugger")())
-        } else {
-            (function () { }
-            ["constructor"]("debugger")())
-        }
-        doCheck(++a)
-    }
-    try {
-        doCheck(0)
-    } catch (err) { }
-};
-check(); 
-if (window.location.href.indexOf('#debug') == -1) {
-    setInterval(function () {
-        (function (a) { return (function (a) { return (Function('Function(arguments[0]+"' + a + '")()')) })(a) })('bugger')('de', 0, 0, (0, 0));
-    }, 1000);
-}
 
 if (window.addEventListener) {
     window.addEventListener("DOMCharacterDataModified", function () { window.location.reload(); }, true);
@@ -82,16 +58,3 @@ setInterval(function () {
         window.location.href = 'about:blank';
     }
 }, 100);
-
-function consoleOpenCallback() {
-    close();
-}
-
-!function () {
-    // 创建一个对象
-    let foo = /./;
-    // 将其打印到控制台上，实际上是一个指针
-    console.log(foo);
-    // 要在第一次打印完之后再重写toString方法
-    foo.toString = consoleOpenCallback;
-}()
