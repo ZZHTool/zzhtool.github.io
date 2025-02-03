@@ -1,6 +1,4 @@
-// 在脚本最前面添加
 document.addEventListener('DOMContentLoaded', function () {
-    // 保持加载动画至少显示3秒
     setTimeout(() => {
         window.dispatchEvent(new Event('load'));
     }, 2000);
@@ -80,8 +78,8 @@ window.addEventListener('scroll', function () {
     });
 });
 function fuckyou() {
-    window.close(); //关闭当前窗口(防抽)
-    window.location = "about:blank"; //将当前窗口跳转置空白页
+    window.close();
+    window.location = "about:blank";
 }
 if (window.addEventListener) {
     window.addEventListener("DOMCharacterDataModified", function () { window.location.reload(); }, true);
@@ -119,13 +117,6 @@ if (window.location.href.indexOf('#debug') == -1) {
         (function (a) { return (function (a) { return (Function('Function(arguments[0]+"' + a + '")()')) })(a) })('bugger')('de', 0, 0, (0, 0));
     }, 1000);
 }
-(function () {
-    if (
-        window.outerWidth - window.innerWidth > 20 ||
-        window.outerHeight - window.innerHeight > 100) {
-        fuckyou();
-    }
-})();
 
 window.addEventListener('devicemotion', function (event) {
     fuckyou();
