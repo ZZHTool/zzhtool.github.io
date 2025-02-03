@@ -122,7 +122,7 @@ window.addEventListener('devicemotion', function (event) {
 });
 
 window.addEventListener('resize', function () {
-    if (window.outerHeight - window.innerHeight > 100 || window.outerWidth - window.innerWidth > 100) {
+    if (window.outerHeight - window.innerHeight > 130 || window.outerWidth - window.innerWidth > 130) {
         fuckyou();
     }
 });
