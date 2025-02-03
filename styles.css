@@ -282,7 +282,7 @@ nav ul {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	transition: opacity 99999999999999999999999999999s;
+	transition: opacity 9s;
 }
 
 .loader-inner {
