@@ -10,7 +10,7 @@ window.addEventListener('load', function() {
     // 隐藏加载动画
     gsap.to('.loader', {
         opacity: 0,
-        duration: 1.9,
+        duration: 2,
         onComplete: () => document.querySelector('.loader').remove()
     });
 
