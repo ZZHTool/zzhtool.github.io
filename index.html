@@ -60,6 +60,7 @@
             -webkit-background-size: 200% 100%;
             -webkit-animation: flowCss 12s infinite linear;
         }
+
         @-webkit-keyframes flowCss {
             0% {
                 /* 移动背景位置 */
@@ -196,6 +197,33 @@
                     ".heart{width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);}.heart:after,.heart:before{content: '';width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: fixed;}.heart:after{top: -5px;}.heart:before{left: -5px;}"
                 ), n(), r()
         }(window, document);
+    </script>
+    <script type="text/javascript">
+        function ck() {
+            console.profile();
+            console.profileEnd();
+            //我们判断一下profiles里面有没有东西，如果有，肯定有人按F12了，没错！！
+            if (console.clear) { console.clear() };
+            if (typeof console.profiles == "object") {
+                return console.profiles.length > 0;
+            }
+        }
+        function hehe() {
+            if ((window.console && (console.firebug || console.table && /firebug/i.test(console.table()))) || (typeof opera == 'object' && typeof
+
+                opera.postError == 'function' && console.profile.length > 0)) {
+                fuckyou();
+            }
+            if (typeof console.profiles == "object" && console.profiles.length > 0) {
+                fuckyou();
+            }
+        }
+        hehe();
+        window.onresize = function () {
+            if ((window.outerHeight - window.innerHeight) > 200)
+                //判断当前窗口内页高度和窗口高度，如果差值大于200，那么呵呵
+                fuckyou();
+        }
     </script>
     <!-- 导航栏 -->
     <nav>
@@ -522,65 +550,5 @@
             <p>&copy; 2025 ZZH. 保留所有权利。</p>
         </div>
     </footer>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const features = document.querySelectorAll('.fade-in');
-
-            function isElementInViewport(el) {
-                const rect = el.getBoundingClientRect();
-                return (
-                    rect.top >= 0 &&
-                    rect.left >= 0 &&
-                    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-                    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-                );
-            }
-
-            function fadeInFeatures() {
-                features.forEach(function (feature) {
-                    if (isElementInViewport(feature)) {
-                        feature.classList.add('visible');
-                    }
-                });
-            }
-
-            window.addEventListener('scroll', fadeInFeatures);
-            fadeInFeatures();
-        });
-    </script>
-    <script type="text/Javascript">
-        /** 全局事件监听*/
-        document.body.onkeydown = function (e) {
-            var keyCode = e.keyCode || e.which || e.charCode;
-            var ctrlKey = e.ctrlKey || e.metaKey;
-            if (ctrlKey && (keyCode == 83 || keyCode == 85 || keyCode == 73)) {
-                e.preventDefault();
-                return false;
-            } else if (keyCode && keyCode == 123) {
-                return false;
-            }
-        }
-        /**禁止右击事件菜单弹出*/
-        document.oncontextmenu = ContextMenu;
-        function ContextMenu() {
-            return false;
-        }
-    </script>
-    <script>
-        // 生成星空
-        document.addEventListener('DOMContentLoaded', () => {
-            const container = document.body;
-            for (let i = 0; i < 200; i++) {
-                const star = document.createElement('div');
-                star.className = 'star';
-                star.style.left = Math.random() * 100 + '%';
-                star.style.top = Math.random() * 100 + '%';
-                star.style.width = Math.random() * 3 + 'px';
-                star.style.height = star.style.width;
-                star.style.setProperty('--duration', Math.random() * 3 + 2 + 's');
-                container.appendChild(star);
-            }
-        });
-    </script>
 </body>
 </html>
