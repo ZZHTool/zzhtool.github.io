@@ -26,3 +26,12 @@ window.addEventListener('load', function() {
         delay: 0.5
     });
 });
+
+// 视差滚动效果
+window.addEventListener('scroll', function () {
+    const scrolled = window.pageYOffset;
+    document.querySelectorAll('.parallax').forEach(el => {
+        const speed = parseFloat(el.dataset.speed) || 0.5;
+        el.style.transform = `translateY(${scrolled * speed}px)`;
+    });
+});
