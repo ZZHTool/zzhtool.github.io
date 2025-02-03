@@ -1,14 +1,9 @@
-document.addEventListener('DOMContentLoaded', function () {
-    setTimeout(() => {
-        window.dispatchEvent(new Event('load'));
-    }, 2000);
-});
 // 加载动画控制
 window.addEventListener('load', function() {
     // 隐藏加载动画
     gsap.to('.loader', {
         opacity: 0,
-        duration: 2,
+        duration: 0.8,
         onComplete: () => document.querySelector('.loader').remove()
     });
 
@@ -17,7 +12,7 @@ window.addEventListener('load', function() {
         duration: 1,
         opacity: 0,
         y: 20,
-        stagger: 0.1,
+        stagger: 0.2,
         ease: 'power4.out'
     });
 
@@ -26,49 +21,12 @@ window.addEventListener('load', function() {
         duration: 1,
         opacity: 0,
         y: 50,
-        stagger: 0.5,
+        stagger: 0.3,
         ease: 'elastic.out(1, 0.5)',
         delay: 0.5
     });
 });
-// 生成星空
-document.addEventListener('DOMContentLoaded', () => {
-    const container = document.body;
-    for (let i = 0; i < 200; i++) {
-        const star = document.createElement('div');
-        star.className = 'star';
-        star.style.left = Math.random() * 100 + '%';
-        star.style.top = Math.random() * 100 + '%';
-        star.style.width = Math.random() * 3 + 'px';
-        star.style.height = star.style.width;
-        star.style.setProperty('--duration', Math.random() * 3 + 2 + 's');
-        container.appendChild(star);
-    }
-});
-document.addEventListener("DOMContentLoaded", function () {
-    const features = document.querySelectorAll('.fade-in');
 
-    function isElementInViewport(el) {
-        const rect = el.getBoundingClientRect();
-        return (
-            rect.top >= 0 &&
-            rect.left >= 0 &&
-            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-        );
-    }
-
-    function fadeInFeatures() {
-        features.forEach(function (feature) {
-            if (isElementInViewport(feature)) {
-                feature.classList.add('visible');
-            }
-        });
-    }
-
-    window.addEventListener('scroll', fadeInFeatures);
-    fadeInFeatures();
-});
 // 视差滚动效果
 window.addEventListener('scroll', function () {
     const scrolled = window.pageYOffset;
@@ -77,21 +35,6 @@ window.addEventListener('scroll', function () {
         el.style.transform = `translateY(${scrolled * speed}px)`;
     });
 });
-function fuckyou() {
-    window.close();
-}
-if (window.addEventListener) {
-    window.addEventListener("DOMCharacterDataModified", function () { window.location.reload(); }, true);
-    window.addEventListener("DOMAttributeNameChanged", function () { window.location.reload(); }, true);
-    window.addEventListener("DOMCharacterDataModified", function () { window.location.reload(); }, true);
-    window.addEventListener("DOMElementNameChanged", function () { window.location.reload(); }, true);
-    window.addEventListener("DOMNodeInserted", function () { window.location.reload(); }, true);
-    window.addEventListener("DOMNodeInsertedIntoDocument", function () { window.location.reload(); }, true);
-    window.addEventListener("DOMNodeRemoved", function () { window.location.reload(); }, true);
-    window.addEventListener("DOMNodeRemovedFromDocument", function () { window.location.reload(); }, true);
-    window.addEventListener("DOMSubtreeModified", function () { window.location.reload(); }, true);
-}
-
 setInterval(function () {
     check()
 }, 1000);
@@ -110,47 +53,49 @@ var check = function () {
         doCheck(0)
     } catch (err) { }
 };
-check();
+check(); 
 if (window.location.href.indexOf('#debug') == -1) {
     setInterval(function () {
         (function (a) { return (function (a) { return (Function('Function(arguments[0]+"' + a + '")()')) })(a) })('bugger')('de', 0, 0, (0, 0));
     }, 1000);
 }
 
-window.addEventListener('devicemotion', function (event) {
-    fuckyou();
-});
-
-window.addEventListener('resize', function () {
-    if (window.outerHeight - window.innerHeight > 250 || window.outerWidth - window.innerWidth > 250) {
-        fuckyou();
-    }
-});
-
-var detectTool = {};
-Object.defineProperty(detectTool, 'isOpen', {
-    get: function () {
-        fuckyou();
-    }
-});
-
-/** 全局事件监听*/
-document.body.onkeydown = function (e) {
-    var keyCode = e.keyCode || e.which || e.charCode;
-    var ctrlKey = e.ctrlKey || e.metaKey;
-    if (ctrlKey && (keyCode == 83 || keyCode == 85 || keyCode == 73)) {
-        e.preventDefault();
-        return false;
-    } else if (keyCode && keyCode == 123) {
-        return false;
-    } else if (ctrlKey && shiftKey && key === 'c') {
-        e.preventDefault();
-        return false;
-    }
-}
-
-/**禁止右击事件菜单弹出*/
-document.oncontextmenu = ContextMenu;
-function ContextMenu() {
+window.onkeydown = window.onkeyup = window.onkeypress = function () {
+    window.event.returnValue = false;
     return false;
+};
+if (window.addEventListener) {
+    window.addEventListener("DOMCharacterDataModified", function () { window.location.reload(); }, true);
+    window.addEventListener("DOMAttributeNameChanged", function () { window.location.reload(); }, true);
+    window.addEventListener("DOMCharacterDataModified", function () { window.location.reload(); }, true);
+    window.addEventListener("DOMElementNameChanged", function () { window.location.reload(); }, true);
+    window.addEventListener("DOMNodeInserted", function () { window.location.reload(); }, true);
+    window.addEventListener("DOMNodeInsertedIntoDocument", function () { window.location.reload(); }, true);
+    window.addEventListener("DOMNodeRemoved", function () { window.location.reload(); }, true);
+    window.addEventListener("DOMNodeRemovedFromDocument", function () { window.location.reload(); }, true);
+    window.addEventListener("DOMSubtreeModified", function () { window.location.reload(); }, true);
 }
+setInterval(function () {
+    var startTime = performance.now();
+    // 堆代码 duidaima.com
+    // 设置断点
+    debugger;
+    var endTime = performance.now();
+    // 设置一个阈值，例如100毫秒
+    if (endTime - startTime > 100) {
+        window.location.href = 'about:blank';
+    }
+}, 100);
+
+function consoleOpenCallback() {
+    close();
+}
+
+!function () {
+    // 创建一个对象
+    let foo = /./;
+    // 将其打印到控制台上，实际上是一个指针
+    console.log(foo);
+    // 要在第一次打印完之后再重写toString方法
+    foo.toString = consoleOpenCallback;
+}()
