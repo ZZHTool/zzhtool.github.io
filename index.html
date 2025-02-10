@@ -13,6 +13,7 @@
     <link rel="icon" href="ZZH.ico" type="image/x-icon">
     <link rel="shortcut icon" href="ZZH.ico" type="image/x-icon">
     <link rel="canonical" href="https://zzhtool.github.io">
+    <link rel="stylesheet" href="compressed-styles.css">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script type="text/javascript">
@@ -22,12 +23,12 @@
             y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
         })(window, document, "clarity", "script", "q081dpw7yy");
     </script>
-    <script src="gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
     <style>
         /* 动态背景样式 */
         body {
             background: linear-gradient(-45deg, #a1c4fd, #0094ff, #47b2ff, #c2e9fb, #a1c4fd, #0094ff, #47b2ff, #c2e9fb, #a1c4fd, #0094ff, #47b2ff, #c2e9fb, #a1c4fd, #0094ff, #47b2ff, #c2e9fb, #a1c4fd, #0094ff, #47b2ff, #c2e9fb, #a1c4fd, #0094ff, #47b2ff, #c2e9fb, #a1c4fd, #0094ff, #47b2ff, #c2e9fb, #a1c4fd, #0094ff, #47b2ff, #c2e9fb, #a1c4fd, #0094ff, #47b2ff, #c2e9fb, #a1c4fd, #0094ff, #47b2ff, #c2e9fb, #a1c4fd, #0094ff, #47b2ff, #c2e9fb, #a1c4fd, #0094ff, #47b2ff, #c2e9fb, #a1c4fd, #0094ff, #47b2ff, #c2e9fb);
-            background-size: 200% 1000%;
+            background-size: 400% 400%;
             animation: gradient 180s ease infinite;
         }
 
@@ -82,7 +83,7 @@
 </head>
 
 <body>
-    <!-- 加载动画 -->
+    <script src="compressed-scripts.js" defer></script>
     <div class="loader">
         <div class="loader-inner">
             <div class="loader-line-wrap">
@@ -102,7 +103,7 @@
             </div>
         </div>
     </div>
-    <script type="text/javascript">
+    <script type="text/javascript" async>
         !function () {
             function n(n, e, t) {
                 return n.getAttribute(e) || t
@@ -147,7 +148,7 @@
             }, 100)
         }();
     </script>
-    <script>
+    <script async>
         ! function (e, t, a) {
             function r() {
                 for (var e = 0; e < s.length; e++) s[e].alpha <= 0 ? (t.body.removeChild(s[e].el), s.splice(e, 1)) : (s[
@@ -205,7 +206,7 @@
         <div class="nav-container">
             <!-- 添加商标图标 -->
             <a href="https://zzhtool.github.io" class="logo">
-                <img src="ZZH.ico" alt="" class="logo-icon">
+                <img src="ZZH.ico" loading="lazy" alt="logo" class="logo-icon">
                 ZZH系统工具 - 强大的系统管理助手
             </a>
             <ul>
