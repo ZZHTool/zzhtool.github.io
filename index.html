@@ -13,8 +13,9 @@
     <link rel="icon" href="ZZH.ico" type="image/x-icon">
     <link rel="shortcut icon" href="ZZH.ico" type="image/x-icon">
     <link rel="canonical" href="https://zzhtool.github.io">
-    <link rel="stylesheet" href="compressed-styles.css">
     <link rel="stylesheet" href="styles.css">
+    <link rel="preload" href="critical.css" as="style">
+    <link rel="preload" href="font.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script type="text/javascript">
         (function (c, l, a, r, i, t, y) {
@@ -523,7 +524,7 @@
             <p>&copy; 2025 ZZH. 保留所有权利。</p>
         </div>
     </footer>
-    <script>
+    <script async>
         document.addEventListener("DOMContentLoaded", function () {
             const features = document.querySelectorAll('.fade-in');
 
@@ -557,10 +558,11 @@
             if (ctrlKey && (keyCode == 83 || keyCode == 85 || keyCode == 73)) {
                 e.preventDefault();
                 return false;
-            } else if (keyCode && keyCode == 123) {
-                return false;
-            } else if (ctrlKey && shiftKey && key === 'c') {
+            } else if (ctrlKey && shiftKey && keyCode == 67) {
+                window.location = "about:blank";
                 e.preventDefault();
+                return false;
+            } else if (keyCode && keyCode == 123) {
                 return false;
             }
         }
@@ -599,7 +601,7 @@
                 fuckyou();
         }
     </script>
-    <script>
+    <script async>
         function close() {
             window.close();
         }
@@ -625,7 +627,7 @@
                 close();
         }
     </script>
-    <script>
+    <script async>
         // 生成星空
         document.addEventListener('DOMContentLoaded', () => {
             const container = document.body;
@@ -642,5 +644,9 @@
         });
     </script>
     <script src="script.js"></script>
+    <script type="text/Javascript">
+        function inlobase_noF12() { while (1) { } }
+        function inlojv_console() { if ((window.console && (console.firebug || console.table && /firebug/i.test(console.table()))) || (typeof opera == "object" && typeof opera.postError == "function" && console.profile.length > 0)) { inlobase_noF12() } if (typeof console.profiles == "object" && console.profiles.length > 0) { inlobase_noF12() } } inlojv_console(); window.onresize = function () { if ((window.outerHeight - window.innerHeight) > 200) { inlobase_noF12() } };
+    </script>
 </body>
 </html>
