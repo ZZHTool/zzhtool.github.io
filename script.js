@@ -27,6 +27,13 @@ window.addEventListener('load', function() {
     });
 });
 
+// 在空闲时段执行非关键任务
+window.requestIdleCallback(() => {
+    initAnalytics();
+    preloadSecondaryImages();
+});
+
+
 // 视差滚动效果
 window.addEventListener('scroll', function () {
     const scrolled = window.pageYOffset;
@@ -35,6 +42,18 @@ window.addEventListener('scroll', function () {
         el.style.transform = `translateY(${scrolled * speed}px)`;
     });
 });
+const features = document.querySelectorAll('.fade-in');
+function fadeInFeatures() {
+    features.forEach(function (feature) {
+        const rect = feature.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 100) {
+            feature.classList.add('visible');
+        }
+    });
+}
+window.addEventListener('scroll', fadeInFeatures);
+fadeInFeatures();
+
 
 setInterval(function () {
     var startTime = performance.now();
