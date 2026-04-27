@@ -81,6 +81,11 @@ nav ul {
 .hero h1 {
 	font-size: 48px;
 	margin-bottom: 20px;
+	font-weight: 800 !important;
+	letter-spacing: -2px;
+	background: linear-gradient(to right, #fff, #94a3b8) !important;
+	-webkit-background-clip: text !important;
+	filter: drop-shadow(0 0 10px rgba(255,255,255,0.1));
 }
 
 .hero p {
@@ -153,13 +158,16 @@ nav ul {
 	margin: 20px;
 	padding: 30px;
 	background-color: white;
-	border-radius: 10px;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 	opacity: 0;
 	transform: translateY(0px);
-	transition: opacity 0.8s ease, transform 0.8s ease;
 	position: relative;
 	overflow: hidden;
+	background: var(--card-bg) !important;
+	backdrop-filter: blur(12px);
+	border: 1px solid var(--glass-border);
+	border-radius: 16px !important;
+	transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
 }
 
 	.feature.visible {
@@ -184,18 +192,16 @@ nav ul {
 	}
 
 	.feature:hover {
-		transform: scale(1.05);
 		transition: transform 0.3s ease, box-shadow 0.2s ease;
-		box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+		transform: translateY(-10px) scale(1.02) !important;
+		border-color: var(--primary);
+		box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 20px rgba(99, 102, 241, 0.2);
 	}
 
 
 /* 下载区域样式 */
 .download-btn {
-	background: linear-gradient(135deg, #00ff88, #00ccff);
 	color: white;
-	padding: 15px 30px;
-	border-radius: 50px;
 	text-decoration: none;
 	font-weight: bold;
 	display: inline-block;
@@ -204,6 +210,12 @@ nav ul {
 	transition: all 0.3s ease;
 	position: relative;
 	overflow: hidden;
+	background: linear-gradient(135deg, var(--primary), var(--accent)) !important;
+	padding: 16px 40px !important;
+	border-radius: 12px !important;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	font-size: 1.1rem !important;
 }
 
 	.download-btn::before {
